@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+      <link rel="stylesheet" media="screen and (max-width: 1000px)" href="petite_resolution.css" />
+      <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+      <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+      <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+   
+  body{
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-width: 100%;
+    overflow:hidden;
+}
+   
+   
+   p { padding: 5px;} 
+   
+   /* modifie le contenu des onglets */
+   div.data-role { font-size: 10px;} 
+   
+   /* la largeur des onglets */
+.header{
+
+  width: 100%;
+  height: 10%;
+  background: purple;
+  border: 0;
+  color: white;
+  padding: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  text-align: center;  
+  
+
+
+}
+
+ 
+  .avatar {
+  
+  vertical-align: inherit;
+  width: 30px;
+  height: 30px;
+  float:left;
+
+ 
+}
+   input[type=inscrit],input[type=connect], input[type=sub], input[type=valide] {
+
+
+ 
+width: 100%;
+  background: #008CBA;
+  border: 0;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;  
+  
+
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  
+  
+  
+}
+
+
+   </style>
+
+   </head>
+   
+   <body>
+      <div data-role = "page" id = "page1">
+         <div style="background-color: purple" data-role = "header" >
+
+            <h1 align="center" style="color: white">Hopital Hbib bourguiba</h1>
+         </div>
+         <h2 align="center" style="color: #0071bc">Bienvenue au notre hopital</h2>
+        <center><img src="logo.jpeg" width="100px"></center><br>
+         <div role = "main" class = "ui-content">
+          
+            <p> 
+<p><select type="list"  name="liste-service"> class="deroulant" </p>
+<form >
+
+<option>Cancérologie </option>
+<option>Pneumologie	</option>
+<option>Cardiologie </option> 
+<option>Neurologie </option> 
+<option>Angiologie</option>
+<option>Chimiothérapie</option>
+ <option>Ambulatoire</option>
+<option>Dialyse Péritonéale</option>
+ <option>Hémodialyse	</option>
+
+<option>Néphrologie </option>
+ <option>Hémodialyse</option>
+<option>Psychologie</option> </select>
+
+</form>
+ <p> 
+<a href = "#page4"> <center><input type="valide" class="btn" value="Selectionner"></center></a></p>
+         </div>
+            <p> 
+
+
+         
+      </div>
+      
+
+      <div data-role = "page" id = "page2">
+         <div style="background-color: purple" data-role = "header"  class="header">
+             <img src="house.jpeg" width="30px" alt="Avatar" class="avatar">
+            <h2 align="center" style="color: white">Authentification</h2>
+         </div> 
+      <div role = "main" class = "ui-content">
+            <h3 style="color: blue">Se connecter</h3>
+            
+            <label for="Adresse">Adresse Email :</label> <br>
+            <input type="text" name="" id ="email"><br>
+            <label for="pass">Mot de passe </label> <br>
+            <input type="password" id="pass" name="password"  minlength="6" maxlength="12" size="12" required><br>
+            <p class="keeplogin"> 
+               <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+               <label for="loginkeeping">souviens-toi de moi</label>
+            </p>
+         
+         <br>
+        <center> <input type="sub" class="login" value="Submit" onclick="getInfo()"></center>
+      
+         </div>
+      </div>
+
+            <div data-role = "page" id = "page4">
+         <div style="background-color: purple" data-role = "header" class="header" >
+             <img src="house.jpeg" width="30px" alt="Avatar" class="avatar">
+            <h2 align="center" style="color: white">Formulaire d'ajouter medecin</h2>
+         </div> 
+      <div role = "main" class = "ui-content">
+         
+            <h3 style="color: blue" >Ajouter medecin</h3>
+            <form action =page2.php method=Post>
+            Nom : <br><input type="text" name=""><br>
+            Prenom : <br><input type="text" name=""><br>
+            Adresse email  : <br><input type="text" name=""><br>
+            Telephone  : <br><input type="password" id="pass" name="password"minlength="8" minlength="6" maxlength="12" size="12" required><br>
+            CIN  : <br><input type="password" id="pass" name="password"  minlength="6" maxlength="12" size="12"  required><br>
+           <a href = "#page5"> <center><input type="valide" class="btn" value="valider"></center> </a>
+         </form>
+      </div>
+	  </div>
+	  
+   
+    
+    
+         <div data-role = "page" id = "page5">
+         <div style="background-color: purple" data-role = "header" class="header" >
+             <img src="house.jpeg" width="30px" alt="Avatar" class="avatar">
+            <h2 align="center" style="color: white">operation d'ajout reussite</h2>
+         </div> 
+      <div role = "main" class = "ui-content">
+         
+            <h3 style="color: blue" ></h3>
+            
+            <center><input type="valide" class="btn" value="medecin ajoute "></center> </a>
+			<a href = "#page6"><center><input type="valide" class="btn" value="modifier medecin "></center> </a>
+         </form>
+      </div>
+      </div>
+   </div>
+   <div data-role = "page" id = "page6">
+         <div style="background-color: purple" data-role = "header" class="header" >
+             <img src="house.jpeg" width="30px" alt="Avatar" class="avatar">
+            <h2 align="center" style="color: white">modification </h2>
+         </div> 
+      <div role = "main" class = "ui-content">
+         
+            <h3 style="color: blue" ></h3>
+            
+            
+			<a href = "#page6"><center><input type="valide" class="btn" value="modifier medecin "></center> </a>
+         </form>
+      </div>
+      </div>
+   </div>
+<div role = "foot" class = "foot">
+</div>
+
+   <php ">
+  // Loop through Array of Objects
+var objPeople = [
+   { // Object @ 0 index
+      email: "nesrine.azaiez90@gmail.com",
+      pass: "infos"
+   },
+   { // Object @ 1 index
+      email: "matt@gmail@com",
+      pass: "1234"
+   },
+   { // Object @ 2 index
+      email: "chris@yahoo.fr",
+      pass: "321456"
+   }
+
+]
+
+function getInfo() {
+   var email= document.getElementById('email').value
+   var pass = document.getElementById('pass').value
+   for(var i = 0; i < objPeople.length; i++) {
+      // check is user input matches username and password of a current index of the objPeople array
+      if(email == objPeople[i].email && pass == objPeople[i].pass) 
+           { 
+             alert(" connexion réussite")
+            return}
+         // stop the function if this is found to be true}
+   
+      else 
+           { alert("echec de connection les informations d'identification sont-ils correctes?")
+             return}
+}}
+     </SCRIPT>
+    
+  
+
+
+
+
+
+</body>
+</html>

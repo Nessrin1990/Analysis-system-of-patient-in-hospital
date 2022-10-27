@@ -1,0 +1,21 @@
+body
+{
+	background:url(model1.jpg);
+	background-attchement:fixed;
+	background-size:cover;
+}
+h1{
+	color:grey;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans","Dejavu Sans", Verdena,"sans-serif";
+	font-weight:400;
+	text-align:center;
+}
+myform{
+	background:white;
+	width:0%;
+	height:100%;
+	padding:25px 25px 25px 25px;
+	border-radius:10px;
+	margin: auto;
+}
+
